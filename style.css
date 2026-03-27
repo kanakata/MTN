@@ -1,0 +1,962 @@
+*{
+    margin: 0;
+    font-family: harrington, jokerman;
+}
+
+body{
+    background: rgba(1, 8, 33, 1);
+}
+
+nav{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+}
+nav .logo{
+    text-transform: uppercase;
+    flex: 1;
+    padding-left: 40px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: logo 2s linear;
+}
+@keyframes logo {
+    from{
+        transform: translateX(-250px);
+    }
+}
+nav .logo img{
+    height: 60px;
+}
+nav .links{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: links 2s linear;
+}
+@keyframes links {
+    from{
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+}
+nav .links a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+}
+nav .contact{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    text-transform: capitalize;
+    padding-right: 40px;
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
+    cursor: pointer;
+    animation: contact 2s linear;
+}
+@keyframes contact {
+    from{
+        transform: translate(200px);
+    }
+}
+nav .contact img{
+    height: 25px;
+}
+
+.section{
+    height: 135vh;
+    width: 100%;
+    background: linear-gradient( rgba(1, 8, 33, .9) , transparent , rgba(1, 8, 33, 1)), url("images/amboseli.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    margin-top: 80px;
+    position: absolute;
+    display: flex;
+    padding-top: 40px;
+    overflow: hidden;
+}
+header .contentholder1{
+    flex: .5;
+    height: 100%;
+    animation: contentholder1 2s linear;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5px;
+}
+@keyframes contentholder1 {
+    from{
+        transform: translateX(-200px);
+    }
+}
+header .contentholder1 h2{
+    height: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: capitalize;
+    rotate: 90deg;
+    position: relative;
+    top: 30%;
+    color: white;
+    font-size: 15px;
+    & a{
+        text-decoration: none;
+    }
+}
+header .contentholder1 h2 img{
+    height: 35px;
+    width: 35px;
+}
+header .contentholder2{
+    flex: 2;
+    margin-top: 7%;
+    padding-left: 60px;
+    animation: contentholder2 2s linear;
+}
+@keyframes contentholder2 {
+    from{
+        transform: translateY(40px);
+        opacity: 0;
+        filter: blur(5px);
+    }
+}
+header .contentholder2 h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header .contentholder2 h2 span{
+    height: 2px;
+    width: 50px;
+    background-color: white;
+}
+header .contentholder2 h1{
+    font-size: 40px;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 550;
+    line-height: 50px;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+header .contentholder2 a{
+    color: black;
+    font-size: 18px;
+    border: 1px solid white;
+    padding: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    background: white;
+}
+header .contentholder3{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 7%;
+    position: fixed;
+    right: 5px;
+    z-index: 100;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 10px  white;
+    background: rgb(0,0,0,0.5);
+}
+header .contentholder3 .navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    animation: navigation 2s linear;
+}
+@keyframes navigation {
+    from{
+        transform: translateX(200px);
+    }
+}
+header .contentholder3 .navigation a{
+    color: white;
+    padding-right: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;    
+    padding-bottom: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: jokerman;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+header .contentholder3 .navigation a span{
+    width: 5px;
+    border-radius: 3px;
+    background: rgb(107, 103, 103);
+    height: 35px;
+}
+header .contentholder3 .navigation .toggle.active span{
+    background: white;
+}
+
+
+.section1{
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    padding: 20px 20px;
+}
+.section1 .contentholder4{
+    flex: 1;
+    height: 100%;
+    padding-left: 150px;
+    position: relative;
+}
+.section1 .contentholder4::before{
+    content: "01";
+    position: absolute;
+    color: rgb(86, 86, 118);
+    font-size: 250px;
+    z-index: -1;
+    left: 40px;
+    font-family: jokerman;
+}
+.section1 .contentholder4 h2 span{
+    height: 2px ;
+    background: white;
+    width: 50px;
+}
+.section1 .contentholder4 h2{
+   color: white;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-size: 15px;
+   padding-top: 100px;
+} 
+.section1 .contentholder4 h1{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.section1 .contentholder4 p{
+    color: white;
+    width: 90%;
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+.section1 .contentholder4 a{
+    color: white;
+    text-decoration: none;
+}
+.section1 .contentholder5{
+    flex: 1;
+    padding-left: 20px;
+}
+.section1 .contentholder5 img{
+    width: 95%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+
+.section2{
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+    padding: 20px 20px;
+}
+.section2 .contentholder7{
+    flex: 1;
+    height: 100%;
+    padding-left: 150px;
+    position: relative;
+}
+.section2 .contentholder7::before{
+    content: "02";
+    position: absolute;
+    color: rgb(86, 86, 118);
+    font-size: 250px;
+    z-index: -1;
+    left: 40px;
+    font-family: jokerman;
+}
+.section2 .contentholder7 h2 span{
+    height: 2px ;
+    background: white;
+    width: 50px;
+}
+.section2 .contentholder7 h2{
+   color: white;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-size: 15px;
+   padding-top: 100px;
+} 
+.section2 .contentholder7 h1{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.section2 .contentholder7 p{
+    color: white;
+    width: 90%;
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+.section2 .contentholder7 a{
+    color: white;
+    text-decoration: none;
+}
+.section2 .contentholder6{
+    flex: 1;
+    padding-left: 20px;
+}
+.section2 .contentholder6 img{
+    width: 95%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.section3{
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    padding: 20px 20px;
+}
+.section3 .contentholder8{
+    flex: 1;
+    height: 100%;
+    padding-left: 150px;
+    position: relative;
+}
+.section3 .contentholder8::before{
+    content: "03";
+    position: absolute;
+    color: rgb(86, 86, 118);
+    font-size: 250px;
+    z-index: -1;
+    left: 40px;
+    font-family: jokerman;
+}
+.section3 .contentholder8 h2 span{
+    height: 2px ;
+    background: white;
+    width: 50px;
+}
+.section3 .contentholder8 h2{
+   color: white;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-size: 15px;
+   padding-top: 100px;
+} 
+.section3 .contentholder8 h1{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.section3 .contentholder8 p{
+    color: white;
+    width: 90%;
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+.section3 .contentholder8 a{
+    color: white;
+    text-decoration: none;
+}
+.section3 .contentholder9{
+    flex: 1;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+.section3 .contentholder9 img{
+    width: 95%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.section4{
+    height: auto;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    border-top: 1px solid white;
+    padding: 10px 0px ;
+}
+.section4 .contentholder10{
+    flex: 1;
+    padding-left: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.section4 .contentholder10 h2{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    gap: 10px;
+    letter-spacing: 1px;
+}
+.section4 .contentholder10 h2 img{
+    height: 60px;
+}
+.section4 .contentholder10 p{
+    color: white;
+    line-height: 30px;
+    font-size: 18px;
+    letter-spacing: .5px;
+}
+.section4 .contentholder10 h3{
+    color: rgb(131, 127, 127);
+    font-size: 18px;
+    bottom: 40px;
+}
+.section4 .contentholder11{
+    flex: 1;
+    display: flex;
+    gap: 100px;
+}
+.section4 .contentholder11 .blog{
+    display: flex;
+    flex-direction: column;
+}
+.section4 .contentholder11 .blog h2{
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.section4 .contentholder11 .blog a{
+    color: white;
+    text-transform: capitalize;
+    padding-bottom: 9px;
+    font-size: 15px;
+    text-decoration: none;
+}
+.section4 .contentholder11 .more{
+    display: flex;
+    flex-direction: column;
+}
+.section4 .contentholder11 .more h2{
+    color: white;
+    padding-bottom: 10px;
+}
+.section4 .contentholder11 .more a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 15px;
+    padding-bottom: 9px;
+    color: white;
+}
+
+@media (max-width: 1030px) {
+
+
+nav{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+}
+nav .logo{
+    padding-left: 10px;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    animation: logo 2s linear;
+}
+nav .logo img{
+    height: 50px;
+}
+nav .links{
+    display: none;
+}
+nav .links a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+}
+nav .contact{
+    display: none;
+}
+
+
+.section{
+    height: 100vh;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    margin-top: 80px;
+    position: absolute;
+    display: flex;
+    padding-top: 40px;
+    overflow: hidden;
+    flex-direction: column;
+}
+header .contentholder1{
+    flex: 0;
+    width: 100%;
+    position: relative;
+    top: 60%;
+    animation: contentholder1 2s linear;
+}
+@keyframes contentholder1 {
+    from{
+        transform: translateX(-200px);
+    }
+}
+header .contentholder1 h2{
+    rotate: 0deg;
+    position: relative;
+    top: 50%;
+    color: white;
+    font-size: 15px;
+    padding-left: 5px;
+}
+header .contentholder1 h2 img{
+    height: 25px;
+    width: 25px;
+}
+header .contentholder2{
+    flex: 0;
+    margin-top: 7%;
+    padding-left: 5px;
+    animation: contentholder2 2s linear;
+}
+@keyframes contentholder2 {
+    from{
+        transform: translateY(40px);
+        opacity: 0;
+        filter: blur(5px);
+    }
+}
+header .contentholder2 h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header .contentholder2 h2 span{
+    height: 2px;
+    width: 50px;
+    background-color: white;
+}
+header .contentholder2 h1{
+    font-size: 40px;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 550;
+    line-height: 50px;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+header .contentholder2 h3{
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+header .contentholder3{
+    flex: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
+    margin-top: 7%;
+}
+header .contentholder3 .navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    animation: navigation 2s linear;
+}
+@keyframes navigation {
+    from{
+        transform: translateX(200px);
+    }
+}
+header .contentholder3 .navigation h2{
+    color: white;
+    padding-right: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;    
+    padding-bottom: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: jokerman;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header .contentholder3 .navigation h2 .toggle{
+    width: 5px;
+    border-radius: 3px;
+    background: rgb(107, 103, 103);
+    height: 35px;
+}
+header .contentholder3 .navigation h2 .toggle.active{
+    background: white;
+}
+
+
+
+.section1{
+    height: auto;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+.section1 .contentholder4{
+    flex: 0;
+    width: 100%;
+    height: 50%;
+    padding-left: 20px;
+    position: relative;
+}
+.section1 .contentholder4::before{
+    content: "01";
+    position: absolute;
+    color: rgb(86, 86, 118);
+    font-size: 200px;
+    z-index: -1;
+    left: 5px;
+    font-family: jokerman;
+}
+.section1 .contentholder4 h2 span{
+    height: 2px ;
+    background: white;
+    width: 50px;
+}
+.section1 .contentholder4 h2{
+   color: white;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-size: 12px;
+   padding-top: 100px;
+} 
+.section1 .contentholder4 h1{
+    color: white;
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 25px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.section1 .contentholder4 p{
+    color: white;
+    width: 95%;
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+.section1 .contentholder5{
+    flex: 0;
+    width: 100%;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+}
+.section1 .contentholder5 img{
+    width: 95%;
+    height: 400px;
+    padding: 30px;
+    rotate: 0deg;
+}
+
+
+
+
+.section2{
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+}
+.section2 .contentholder7{
+    flex: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    position: relative;
+}
+.section2 .contentholder7::before{
+    content: "02";
+    position: absolute;
+    color: rgb(86, 86, 118);
+    font-size: 200px;
+    z-index: -1;
+    left: 5px;
+    font-family: jokerman;
+}
+.section2 .contentholder7 h2 span{
+    height: 2px ;
+    background: white;
+    width: 50px;
+}
+.section2 .contentholder7 h2{
+   color: white;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-size: 15px;
+   padding-top: 100px;
+} 
+.section2 .contentholder7 h1{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.section2 .contentholder7 p{
+    color: white;
+    width: 90%;
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+.section2 .contentholder7 a{
+    color: white;
+    text-decoration: none;
+}
+.section2 .contentholder6{
+    flex: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+}
+.section2 .contentholder6 img{
+    width: 95%;
+    height: 400px;
+    padding: 30px;
+    rotate: 0deg;
+}
+
+
+
+.section3{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.section3 .contentholder8{
+    flex: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    position: relative;
+}
+.section3 .contentholder8::before{
+    content: "03";
+    position: absolute;
+    color: rgb(86, 86, 118);
+    font-size: 200px;
+    z-index: -1;
+    left: 5px;
+    font-family: jokerman;
+}
+.section3 .contentholder8 h2 span{
+    height: 2px ;
+    background: white;
+    width: 50px;
+}
+.section3 .contentholder8 h2{
+   color: white;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-size: 15px;
+   padding-top: 100px;
+} 
+.section3 .contentholder8 h1{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.section3 .contentholder8 p{
+    color: white;
+    width: 90%;
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+.section3 .contentholder8 a{
+    color: white;
+    text-decoration: none;
+}
+.section3 .contentholder9{
+    flex: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+}
+.section3 .contentholder9 img{
+    width: 95%;
+    height: 400px;
+    padding: 30px;
+    rotate: 0deg;
+}
+
+
+
+.section4{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.section4 .contentholder10{
+    flex: 0;
+    width: 100%;
+    padding-left: 10px;
+    position: relative;
+}
+.section4 .contentholder10 h2{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    gap: 10px;
+    letter-spacing: 1px;
+}
+.section4 .contentholder10 h2 img{
+    height: 60px;
+}
+.section4 .contentholder10 p{
+    color: white;
+    line-height: 30px;
+    font-size: 18px;
+    letter-spacing: .5px;
+}
+.section4 .contentholder10 h3{
+    display: none;
+}
+.section4 .contentholder11{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+.section4 .contentholder11 .blog{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.section4 .contentholder11 .blog h2{
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding-bottom: 10px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-size: 20px;
+}
+.section4 .contentholder11 .blog a{
+    color: white;
+    text-transform: capitalize;
+    padding-bottom: 9px;
+    font-size: 12px;
+    text-decoration: none;
+}
+.section4 .contentholder11 .more{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.section4 .contentholder11 .more h2{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+.section4 .contentholder11 .more a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 15px;
+    padding-bottom: 9px;
+    color: white;
+}
+.section4 h3{
+    color: rgb(131, 127, 127);
+    font-size: 18px;
+    padding-left: 10px;
+}
+}
